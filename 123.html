@@ -450,19 +450,19 @@ text-cyan-200 block mb-1 uppercase tracking-wider">JPY (日幣)</label>
                 <div class="text-sm space-y-3">
                     <div class="flex justify-between">
                         <span class="text-slate-500">公司</span>
-                        <span class="font-bold text-slate-700">Nissan Rent a Car</span>
+                        <span class="font-bold text-slate-700">Toyota rent a car 租車 富士河口湖店</span>
                     </div>
                     <div class="flex justify-between">
                         <span class="text-slate-500">取車點</span>
-                        <span class="font-bold text-slate-700 text-right">札幌駅南口アスティ店</span>
+                        <span class="font-bold text-slate-700 text-right">Toyota 租車 富士河口湖店</span>
                     </div>
                     <div class="flex justify-between">
                         <span class="text-slate-500">期間</span>
-                        <span class="font-bold text-slate-700">2/2 08:00 - 2/6 20:00</span>
+                        <span class="font-bold text-slate-700">12/15 10:00 - 12/16 10:00</span>
                     </div>
                     <div class="flex justify-between">
                         <span class="text-slate-500">車型</span>
-                        <span class="font-bold text-slate-700">Kicks (油電)</span>
+                        <span class="font-bold text-slate-700">C2</span>
                     </div>
                     <button @click="openMap('Nissan Rent a Car Sapporo Station South Exit Asty')" class="w-full mt-4 bg-green-50 text-green-700 py-3 rounded-xl text-sm font-bold hover:bg-green-100 transition-colors flex items-center justify-center">
                         <i class="fa-solid fa-diamond-turn-right mr-2"></i> 導航去取車點
@@ -698,7 +698,7 @@ rounded-xl p-3 text-sm text-slate-600 outline-none">
 
             const hotels = ref([
                 { name: '日本駒込民宿', date: '12/13 - 12/14 (1晚)', phone: '+81-90-8681-1888', address: '〒170-0003 東京都豐島市駒込 2-7-18 703室' },
-                { name: '富士山大飯店', date: '12/14 - 12/15 (1晚)', phone: '+81-555-62-2111', address: '富士山大飯店' },
+                { name: '富士山大飯店', date: '12/14 - 12/15 (1晚)', phone: '+81-555-62-2111', address: '〒401-0501 山梨縣南都留郡山中湖村山中1360-83' },
                 { name: '日本駒込民宿', date: '12/15 - 12/18 (2晚)', phone: '+81-90-8681-1888', address: '〒170-0003 東京都豐島市駒込 2-7-18 703室' },
             ]);
             
@@ -712,13 +712,6 @@ rounded-xl p-3 text-sm text-slate-600 outline-none">
                     { id: 104, name: '新宿西口【逛街】', category: 'shopping', startTime: '14:45', address: '新宿站西口', note: '新宿站西口商圈熱鬧繁華，匯聚大型百貨公司、潮流服飾店、特色餐飲與咖啡廳。不論是追求時尚潮流，還是品嘗美食或選購紀念品，都能一次滿足。交通便利，步行即可探索多條購物街道，是遊客與當地人喜愛的逛街好去處。', hours: '停留：2h(~16:45)', price: null, transportType: 'bus', travelTime: '24m ＊JR山手線：在【駒込站】搭乘15m至【新宿站】', isNoteExpanded: false },
                     { id: 105, name: '歌舞伎町【逛街】', category: 'shopping', startTime: '16:53', address: '歌舞伎町', note: '歌舞伎町位於新宿，是東京著名的娛樂區，以夜生活、酒吧、餐廳和各式娛樂設施聞名。這裡燈火通明，氣氛熱鬧，是體驗東京夜間文化的熱門地點，也有戲院、卡拉OK及特色主題餐廳，適合夜遊和感受都市繁華。', hours: '停留：2h(~18:53)', price: null, url: 'https://tokyo.letsgojp.com/archives/498727/', transportType: 'walk', travelTime: '步行8m', isNoteExpanded: false },
                     { id: 106, name: '日本駒込民宿【休憩】', category: 'accommodation', startTime: '19:41', address: '2-chōme-7-18 Komagome, Toshima City, Tokyo 170-0003日本', note: '返回民宿休憩。', hours: null, price: null, transportType: 'bus', travelTime: '34m ＊JR山手線：在【新宿站】搭乘15m至【駒込站】', isNoteExpanded: false },
-
-                    { id: 408, name: '台場海濱公園【景點】【煙火】', category: 'sightseeing', startTime: '16:35', address: '台場海濱公園', note: '冬季限定煙火', hours: '停留：2h40m(~19:15)(含散步、晚餐及煙火時間)', price: null, transportType: 'bus', travelTime: '步行', isNoteExpanded: false },
-
-
-
-
-
 
                 ],
                 // Day 2: 12/14 (日) 晴空塔
@@ -778,11 +771,10 @@ rounded-xl p-3 text-sm text-slate-600 outline-none">
             const weatherData = ref([
                 { condition: 'sunny', temp: '13/4', feel: '建議穿著多層保暖衣物（例如：保暖內層 + 外套），早晚溫差大，要留意保暖。' },
                 { condition: 'sunny', temp: '8/5', feel: '因空氣乾燥，建議攜帶 護手霜 / 潤唇膏 / 保濕用品，多喝水或溫飲以防乾燥。' },
-                { condition: 'snow', temp: '-2/-10', feel: '-12' },
-                { condition: 'snow', temp: '-3/-8', feel: '-11' },
-                { condition: 'snow', temp: '1/-4', feel: '-6' },
-                { condition: 'snow', temp: '2/-3', feel: '-5' },
-                { condition: 'cloudy', temp: '3/-2', feel: '-3' },
+                { condition: 'sunny', temp: '10/2', feel: '清晨與夜間氣溫很低，有可能接近冰點，建議穿戴防風、防寒衣物（如厚外套、圍巾、手套、帽子等）。' },
+                { condition: 'sunny', temp: '12/2', feel: '白天雖有太陽，但氣溫偏涼，建議穿「中等厚度外套 + 長袖衣物」。' },
+                { condition: 'sunny', temp: '12/2', feel: '白天：建議穿 中等厚度外套 + 長袖；若你從晚上出發／停留到夜間，最好帶上 圍巾／薄手套／帽子，以應對晚間或早晚的低溫。' },
+                { condition: 'snow', temp: '14/-2', feel: '建議穿 保暖外套 + 長袖 + 輕便圍巾／手套，以應對清晨與夜間的低溫。' },
             ]);
             
             // 購物清單 (範例資料)
@@ -794,10 +786,6 @@ rounded-xl p-3 text-sm text-slate-600 outline-none">
 
             // 花費紀錄 (範例資料)
             const expenses = ref([
-                { name: '機票費用', amount: 35000, category: 'flight', date: '2026-01-15', payment: 'card' },
-                { name: '札幌湯咖哩', amount: 4500, category: 'food', date: '2026-03-06', payment: 'cash' },
-                { name: '小樽水族館門票', amount: 3600, category: 'ticket', date: '2026-03-07', payment: 'card' },
-                { name: '登別溫泉飯店', amount: 80000, category: 'stay', date: '2026-03-09', payment: 'card' },
             ]);
 
             // --- 狀態控制 ---
