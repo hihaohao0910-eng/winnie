@@ -349,12 +349,7 @@ item.isNoteExpanded ? '收合備註' : '查看更多...' }}
                         </div>
 
                         <div class="absolute top-3 right-3 flex flex-col space-y-1">
-                            <button v-if="idx > 0" @click.stop="moveItineraryUp(item.id)" class="w-7 h-7 bg-slate-100 text-slate-500 rounded-full flex items-center justify-center text-xs hover:bg-slate-300 transition-colors" title="上移">
-                                <i class="fa-solid fa-arrow-up"></i>
-                            </button>
-                            <button v-if="idx < currentItinerary.length - 1" @click.stop="moveItineraryDown(item.id)" class="w-7 h-7 bg-slate-100 text-slate-500 rounded-full flex items-center justify-center text-xs hover:bg-slate-300 transition-colors" title="下移">
-                                <i class="fa-solid fa-arrow-down"></i>
-                            </button>
+
                             <button @click.stop="openMap(item.address || item.name)" class="w-7 h-7 bg-ice-blue text-deep-sea-blue rounded-full flex items-center justify-center text-xs hover:bg-deep-sea-blue hover:text-white transition-colors" title="Google Maps 導航">
                                 <i class="fa-solid fa-location-arrow"></i>
                             </button>
